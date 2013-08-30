@@ -15,6 +15,8 @@ $Error::Pure::Output::JSON::PRETTY = 1;
 err '1';
 
 # Output like:
+# Content-type: application/json
+#
 # [
 #    {
 #       "msg" : [

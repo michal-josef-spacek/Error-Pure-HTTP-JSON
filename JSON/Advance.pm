@@ -1,4 +1,4 @@
-package Error::Pure::HTTP::JSON;
+package Error::Pure::HTTP::JSON::Advance;
 
 # Pragmas.
 use base qw(Exporter);
@@ -18,6 +18,9 @@ Readonly::Scalar my $EVAL => 'eval {...}';
 # Version.
 our $VERSION = 0.01;
 
+# Global variables.
+our %ERR_PARAMETERS;
+
 # Ignore die signal.
 $SIG{__DIE__} = 'IGNORE';
 
@@ -34,8 +37,17 @@ sub err {
 		&& none { $_ eq $EVAL || $_ =~ /^eval '/ms }
 		map { $_->{'sub'} } @{$stack_ar}) {
 
+		# Construct error structure.
+		my $err_hr = {
+			'error-pure' => \@errors,
+		};
+		foreach my $key (keys %ERR_PARAMETERS) {
+			$err_hr->{$key} = $ERR_PARAMETERS{$key};
+		}
+
+		# Print out.
 		print "Content-type: application/json\n\n";
-		print err_json(@errors);
+		print err_json($err_hr);
 		return;
 
 	# Die for eval.
@@ -58,11 +70,11 @@ __END__
 
 =head1 NAME
 
-Error::Pure::HTTP::JSON - Error::Pure module for JSON output over HTTP.
+Error::Pure::HTTP::JSON::Advance - Error::Pure module for JSON output with additional parameters over HTTP.
 
 =head1 SYNOPSIS
 
- use Error::Pure::HTTP::JSON qw(err);
+ use Error::Pure::HTTP::JSON::Advance qw(err);
  err 'This is a fatal error', 'name', 'value';
 
 =head1 SUBROUTINES
@@ -71,7 +83,7 @@ Error::Pure::HTTP::JSON - Error::Pure module for JSON output over HTTP.
 
 =item B<err(@messages)>
 
- Process error in JSON format with messages @messages over HTTP.
+ Process error in JSON format with messages @messages.
  Output affects $Error::Pure::Output::JSON::PRETTY variable.
 
 =back
@@ -83,7 +95,13 @@ Error::Pure::HTTP::JSON - Error::Pure module for JSON output over HTTP.
  use warnings;
 
  # Modules.
- use Error::Pure::HTTP::JSON qw(err);
+ use Error::Pure::HTTP::JSON::Advance qw(err);
+
+ # Additional parameters.
+ %Error::Pure::HTTP::JSON::Advance::ERR_PARAMETERS = (
+         'status' => 1,
+         'message' => 'Foo bar',
+ );
 
  # Error.
  err '1';
@@ -91,7 +109,7 @@ Error::Pure::HTTP::JSON - Error::Pure module for JSON output over HTTP.
  # Output like:
  # Content-type: application/json
  #
- # [{"msg":["1"],"stack":[{"sub":"err","prog":"example1.pl","args":"(1)","class":"main","line":11}]}]
+ # [{"status":1,"error-pure":[{"msg":["1"],"stack":[{"sub":"err","prog":"example1.pl","args":"(1)","class":"main","line":17}]}],"message":"Foo bar"}]
 
 =head1 EXAMPLE2
 
@@ -100,7 +118,13 @@ Error::Pure::HTTP::JSON - Error::Pure module for JSON output over HTTP.
  use warnings;
 
  # Modules.
- use Error::Pure::HTTP::JSON qw(err);
+ use Error::Pure::HTTP::JSON::Advance qw(err);
+
+ # Additional parameters.
+ %Error::Pure::HTTP::JSON::Advance::ERR_PARAMETERS = (
+         'status' => 1,
+         'message' => 'Foo bar',
+ );
 
  # Error.
  err '1', '2', '3';
@@ -108,7 +132,7 @@ Error::Pure::HTTP::JSON - Error::Pure module for JSON output over HTTP.
  # Output like:
  # Content-type: application/json
  #
- # [{"msg":["1","2","3"],"stack":[{"sub":"err","prog":"example2.pl","args":"(1, 2, 3)","class":"main","line":11}]}]
+ # [{"status":1,"error-pure":[{"msg":["1","2","3"],"stack":[{"sub":"err","prog":"example2.pl","args":"(1, 2, 3)","class":"main","line":17}]}],"message":"Foo bar"}]
 
 =head1 EXAMPLE3
 
@@ -118,7 +142,13 @@ Error::Pure::HTTP::JSON - Error::Pure module for JSON output over HTTP.
 
  # Modules.
  use Error::Pure::Output::JSON;
- use Error::Pure::HTTP::JSON qw(err);
+ use Error::Pure::HTTP::JSON::Advance qw(err);
+
+ # Additional parameters.
+ %Error::Pure::HTTP::JSON::Advance::ERR_PARAMETERS = (
+         'status' => 1,
+         'message' => 'Foo bar',
+ );
 
  # Pretty print.
  $Error::Pure::Output::JSON::PRETTY = 1;
@@ -131,18 +161,24 @@ Error::Pure::HTTP::JSON - Error::Pure module for JSON output over HTTP.
  #
  # [
  #    {
- #       "msg" : [
- #          "1"
- #       ],
- #       "stack" : [
+ #       "status" : 1,
+ #       "error-pure" : [
  #          {
- #             "sub" : "err",
- #             "prog" : "example3.pl",
- #             "args" : "(1)",
- #             "class" : "main",
- #             "line" : 15
+ #             "msg" : [
+ #                "1"
+ #             ],
+ #             "stack" : [
+ #                {
+ #                   "sub" : "err",
+ #                   "prog" : "example3.pl",
+ #                   "args" : "(1)",
+ #                   "class" : "main",
+ #                   "line" : 21
+ #                }
+ #             ]
  #          }
- #       ]
+ #       ],
+ #       "message" : "Foo bar"
  #    }
  # ]
 
@@ -165,7 +201,7 @@ L<Error::Pure::ErrorList>,
 L<Error::Pure::HTTP::AllError>,
 L<Error::Pure::HTTP::Error>,
 L<Error::Pure::HTTP::ErrorList>,
-L<Error::Pure::HTTP::JSON::Advance>,
+L<Error::Pure::HTTP::JSON>,
 L<Error::Pure::HTTP::Print>,
 L<Error::Pure::JSON>,
 L<Error::Pure::JSON::Advance>,
@@ -176,7 +212,7 @@ L<Error::Pure::Utils>.
 
 =head1 REPOSITORY
 
-L<https://github.com/tupinek/Error-Pure-HTTP-JSON>
+L<https://github.com/tupinek/Error-Pure-JSON>
 
 =head1 AUTHOR
 
