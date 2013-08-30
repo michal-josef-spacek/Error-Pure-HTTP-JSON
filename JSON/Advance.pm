@@ -16,7 +16,7 @@ Readonly::Array our @EXPORT_OK => qw(err);
 Readonly::Scalar my $EVAL => 'eval {...}';
 
 # Version.
-our $VERSION = 0.02;
+our $VERSION = 0.03;
 
 # Global variables.
 our %ERR_PARAMETERS;
@@ -224,6 +224,6 @@ BSD license.
 
 =head1 VERSION
 
-0.02
+0.03
 
 =cut
