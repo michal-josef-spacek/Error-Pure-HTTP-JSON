@@ -28,6 +28,7 @@ no_index:
 requires:
   Error::Pure::Output::JSON: 0.01
   Error::Pure::Utils: 0.11
+  List::MoreUtils: 0
   Readonly: 0
 resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Error-Pure-HTTP-JSON
