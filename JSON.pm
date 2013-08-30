@@ -35,7 +35,7 @@ sub err {
 		map { $_->{'sub'} } @{$stack_ar}) {
 
 		print "Content-type: application/json\n\n";
-		print err_json(@errors);
+		print err_json(\@errors);
 		return;
 
 	# Die for eval.

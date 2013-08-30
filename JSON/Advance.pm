@@ -109,7 +109,7 @@ Error::Pure::HTTP::JSON::Advance - Error::Pure module for JSON output with addit
  # Output like:
  # Content-type: application/json
  #
- # [{"status":1,"error-pure":[{"msg":["1"],"stack":[{"sub":"err","prog":"example1.pl","args":"(1)","class":"main","line":17}]}],"message":"Foo bar"}]
+ # {"status":1,"error-pure":[{"msg":["1"],"stack":[{"sub":"err","prog":"example1.pl","args":"(1)","class":"main","line":17}]}],"message":"Foo bar"}
 
 =head1 EXAMPLE2
 
@@ -132,7 +132,7 @@ Error::Pure::HTTP::JSON::Advance - Error::Pure module for JSON output with addit
  # Output like:
  # Content-type: application/json
  #
- # [{"status":1,"error-pure":[{"msg":["1","2","3"],"stack":[{"sub":"err","prog":"example2.pl","args":"(1, 2, 3)","class":"main","line":17}]}],"message":"Foo bar"}]
+ # {"status":1,"error-pure":[{"msg":["1","2","3"],"stack":[{"sub":"err","prog":"example2.pl","args":"(1, 2, 3)","class":"main","line":17}]}],"message":"Foo bar"}
 
 =head1 EXAMPLE3
 
@@ -159,28 +159,26 @@ Error::Pure::HTTP::JSON::Advance - Error::Pure module for JSON output with addit
  # Output like:
  # Content-type: application/json
  #
- # [
- #    {
- #       "status" : 1,
- #       "error-pure" : [
- #          {
- #             "msg" : [
- #                "1"
- #             ],
- #             "stack" : [
- #                {
- #                   "sub" : "err",
- #                   "prog" : "example3.pl",
- #                   "args" : "(1)",
- #                   "class" : "main",
- #                   "line" : 21
- #                }
- #             ]
- #          }
- #       ],
- #       "message" : "Foo bar"
- #    }
- # ]
+ # {
+ #    "status" : 1,
+ #    "error-pure" : [
+ #       {
+ #          "msg" : [
+ #             "1"
+ #          ],
+ #          "stack" : [
+ #             {
+ #                "sub" : "err",
+ #                "prog" : "example3.pl",
+ #                "args" : "(1)",
+ #                "class" : "main",
+ #                "line" : 21
+ #             }
+ #          ]
+ #       }
+ #    ],
+ #    "message" : "Foo bar"
+ # }
 
 =head1 DEPENDENCIES
 
