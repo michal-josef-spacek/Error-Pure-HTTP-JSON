@@ -19,6 +19,7 @@ LICENSE
 Makefile.PL
 MANIFEST			This list of files
 META.yml
+README
 SIGNATURE
 t/Error-Pure-HTTP-JSON-Advance/00-use.t
 t/Error-Pure-HTTP-JSON-Advance/01-version.t
