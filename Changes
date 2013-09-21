@@ -1,4 +1,4 @@
-0.03
+0.03 2013-09-21
  - Add dependency for perl (based on Error::Pure).
  - Rewrite Changes file to CPAN::Changes::SPEC format.
 
