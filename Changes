@@ -1,9 +1,10 @@
 0.03
-- Add dependency for perl (based on Error::Pure).
+ - Add dependency for perl (based on Error::Pure).
+ - Rewrite Changes file to CPAN::Changes::SPEC format.
 
-0.02 (August 31, 2013)
-- Add README.
-- Fix dependencies.
+0.02 2013-08-31
+ - Add README.
+ - Fix dependencies.
 
-0.01 (August 30, 2013)
-- First version.
+0.01 2013-08-30
+ - First version.
