@@ -10,6 +10,7 @@ abstract 'Perl module for HTTP JSON output for structured errors.';
 author 'Michal Špaček <skim@cpan.org>';
 license 'bsd';
 name 'Error-Pure-HTTP-JSON';
+readme_from 'JSON.pm';
 requires 'Error::Pure::Utils' => 0.11;
 requires 'Error::Pure::Output::JSON' => 0.01;
 requires 'Exporter' => 0;
