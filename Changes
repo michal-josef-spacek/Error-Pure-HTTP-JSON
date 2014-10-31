@@ -6,6 +6,7 @@
  [Error::Pure::HTTP::JSON]
  - Fix warning with chomp on undefined value. Fix to standard Error::Pure
    style.
+ - Add basic tests.
 
 0.03 2013-09-21
  - Add dependency for perl (based on Error::Pure).

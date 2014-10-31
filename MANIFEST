@@ -30,3 +30,4 @@ t/Error-Pure-HTTP-JSON/00-use.t
 t/Error-Pure-HTTP-JSON/01-version.t
 t/Error-Pure-HTTP-JSON/02-pod_coverage.t
 t/Error-Pure-HTTP-JSON/03-pod.t
+t/Error-Pure-HTTP-JSON/04-err.t
