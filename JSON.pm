@@ -41,7 +41,11 @@ sub err {
 	# Die for eval.
 	} else {
 		my $e = $errors[-1]->{'msg'}->[0];
-		chomp $e;
+		if (! defined $e) {
+			$e = 'undef';
+		} else {
+			chomp $e;
+		}
 		die "$e\n";
 	}
 

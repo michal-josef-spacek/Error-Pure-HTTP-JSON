@@ -3,6 +3,10 @@
  - Add 'readme_from' directive to Makefile.PL.
  - Update Module::Install to 1.14 version.
 
+ [Error::Pure::HTTP::JSON]
+ - Fix warning with chomp on undefined value. Fix to standard Error::Pure
+   style.
+
 0.03 2013-09-21
  - Add dependency for perl (based on Error::Pure).
  - Rewrite Changes file to CPAN::Changes::SPEC format.
