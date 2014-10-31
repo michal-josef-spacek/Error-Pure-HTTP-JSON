@@ -1,6 +1,6 @@
 0.04
  - Add 'readme_from' directive to Makefile.PL.
- - Update Module::Install to 1.12 version.
+ - Update Module::Install to 1.14 version.
 
 0.03 2013-09-21
  - Add dependency for perl (based on Error::Pure).
