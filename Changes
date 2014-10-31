@@ -1,4 +1,5 @@
 0.04
+ [Common]
  - Add 'readme_from' directive to Makefile.PL.
  - Update Module::Install to 1.14 version.
 
