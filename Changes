@@ -1,4 +1,6 @@
 0.05
+ [Common]
+ - Update Module::Install to 1.16 version.
 
 0.04 2014-11-11T03:06:48+01:00
  [Common]
