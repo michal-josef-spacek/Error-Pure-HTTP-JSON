@@ -82,13 +82,8 @@ DEPENDENCIES
     List::MoreUtils, Readonly.
 
 SEE ALSO
-    Error::Pure, Error::Pure::AllError, Error::Pure::Always,
-    Error::Pure::Die, Error::Pure::Error, Error::Pure::ErrorList,
-    Error::Pure::HTTP::AllError, Error::Pure::HTTP::Error,
-    Error::Pure::HTTP::ErrorList, Error::Pure::HTTP::JSON::Advance,
-    Error::Pure::HTTP::Print, Error::Pure::JSON, Error::Pure::JSON::Advance,
-    Error::Pure::NoDie, Error::Pure::Output::JSON,
-    Error::Pure::Output::Text, Error::Pure::Utils.
+    Task::Error::Pure
+        Install the Error::Pure modules.
 
 REPOSITORY
     <https://github.com/tupinek/Error-Pure-HTTP-JSON>
