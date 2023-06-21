@@ -11,11 +11,9 @@ SUBROUTINES
              Output affects $Error::Pure::Output::JSON::PRETTY variable.
 
 EXAMPLE1
-     # Pragmas.
      use strict;
      use warnings;
 
-     # Modules.
      use Error::Pure::HTTP::JSON qw(err);
 
      # Error.
@@ -27,11 +25,9 @@ EXAMPLE1
      # [{"msg":["1"],"stack":[{"sub":"err","prog":"example1.pl","args":"(1)","class":"main","line":11}]}]
 
 EXAMPLE2
-     # Pragmas.
      use strict;
      use warnings;
 
-     # Modules.
      use Error::Pure::HTTP::JSON qw(err);
 
      # Error.
@@ -43,11 +39,9 @@ EXAMPLE2
      # [{"msg":["1","2","3"],"stack":[{"sub":"err","prog":"example2.pl","args":"(1, 2, 3)","class":"main","line":11}]}]
 
 EXAMPLE3
-     # Pragmas.
      use strict;
      use warnings;
 
-     # Modules.
      use Error::Pure::Output::JSON;
      use Error::Pure::HTTP::JSON qw(err);
 

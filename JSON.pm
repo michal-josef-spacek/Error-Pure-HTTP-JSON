@@ -1,11 +1,9 @@
 package Error::Pure::HTTP::JSON;
 
-# Pragmas.
 use base qw(Exporter);
 use strict;
 use warnings;
 
-# Modules.
 use Error::Pure::Output::JSON qw(err_json);
 use Error::Pure::Utils qw(err_helper);
 use List::MoreUtils qw(none);
@@ -15,7 +13,6 @@ use Readonly;
 Readonly::Array our @EXPORT_OK => qw(err);
 Readonly::Scalar my $EVAL => 'eval {...}';
 
-# Version.
 our $VERSION = 0.06;
 
 # Ignore die signal.
@@ -82,11 +79,9 @@ Error::Pure::HTTP::JSON - Error::Pure module for JSON output over HTTP.
 
 =head1 EXAMPLE1
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Error::Pure::HTTP::JSON qw(err);
 
  # Error.
@@ -99,11 +94,9 @@ Error::Pure::HTTP::JSON - Error::Pure module for JSON output over HTTP.
 
 =head1 EXAMPLE2
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Error::Pure::HTTP::JSON qw(err);
 
  # Error.
@@ -116,11 +109,9 @@ Error::Pure::HTTP::JSON - Error::Pure module for JSON output over HTTP.
 
 =head1 EXAMPLE3
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Error::Pure::Output::JSON;
  use Error::Pure::HTTP::JSON qw(err);
 
