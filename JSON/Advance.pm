@@ -195,7 +195,7 @@ Install the Error::Pure modules.
 
 =head1 REPOSITORY
 
-L<https://github.com/tupinek/Error-Pure-JSON>
+L<https://github.com/michal-josef-spacek/Error-Pure-JSON>
 
 =head1 AUTHOR
 
