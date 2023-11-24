@@ -76,6 +76,7 @@ Error::Pure::HTTP::JSON::Advance - Error::Pure module for JSON output with addit
 =head1 SYNOPSIS
 
  use Error::Pure::HTTP::JSON::Advance qw(err);
+
  err 'This is a fatal error', 'name', 'value';
 
 =head1 SUBROUTINES

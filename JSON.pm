@@ -64,6 +64,7 @@ Error::Pure::HTTP::JSON - Error::Pure module for JSON output over HTTP.
 =head1 SYNOPSIS
 
  use Error::Pure::HTTP::JSON qw(err);
+
  err 'This is a fatal error', 'name', 'value';
 
 =head1 SUBROUTINES
