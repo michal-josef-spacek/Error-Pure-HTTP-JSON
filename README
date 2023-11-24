@@ -7,9 +7,11 @@ SYNOPSIS
      err 'This is a fatal error', 'name', 'value';
 
 SUBROUTINES
-    err(@messages)
-             Process error in JSON format with messages @messages over HTTP.
-             Output affects $Error::Pure::Output::JSON::PRETTY variable.
+  "err"
+     err 'This is a fatal error', 'name', 'value';
+
+    Process error in JSON format with messages @messages over HTTP. Output
+    affects $Error::Pure::Output::JSON::PRETTY variable.
 
 EXAMPLE1
      use strict;

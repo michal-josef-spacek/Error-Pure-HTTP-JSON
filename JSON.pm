@@ -69,14 +69,12 @@ Error::Pure::HTTP::JSON - Error::Pure module for JSON output over HTTP.
 
 =head1 SUBROUTINES
 
-=over 8
+=head2 C<err>
 
-=item B<err(@messages)>
+ err 'This is a fatal error', 'name', 'value';
 
- Process error in JSON format with messages @messages over HTTP.
- Output affects $Error::Pure::Output::JSON::PRETTY variable.
-
-=back
+Process error in JSON format with messages C<@messages> over HTTP.
+Output affects C<$Error::Pure::Output::JSON::PRETTY> variable.
 
 =head1 EXAMPLE1
 

@@ -5,6 +5,7 @@
  - Move bugtracker to github.
  - Rename example files to better names.
  - Rewrite from List::MoreUtils to List::Util.
+ - Rewrite to use of =head2 in doc.
  - Update Module::Install to 1.21 version.
  - Update author github username.
  - Update author name.

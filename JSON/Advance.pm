@@ -81,14 +81,10 @@ Error::Pure::HTTP::JSON::Advance - Error::Pure module for JSON output with addit
 
 =head1 SUBROUTINES
 
-=over 8
+=head2 C<err>
 
-=item B<err(@messages)>
-
- Process error in JSON format with messages @messages.
- Output affects $Error::Pure::Output::JSON::PRETTY variable.
-
-=back
+Process error in JSON format with messages C<@messages>.
+Output affects C<$Error::Pure::Output::JSON::PRETTY> variable.
 
 =head1 EXAMPLE1
 
