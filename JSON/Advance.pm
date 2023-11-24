@@ -91,6 +91,8 @@ Error::Pure::HTTP::JSON::Advance - Error::Pure module for JSON output with addit
 
 =head1 EXAMPLE1
 
+=for comment filename=http_json_error_advance.pl
+
  use strict;
  use warnings;
 
@@ -112,6 +114,8 @@ Error::Pure::HTTP::JSON::Advance - Error::Pure module for JSON output with addit
 
 =head1 EXAMPLE2
 
+=for comment filename=http_json_error_advance_with_options.pl
+
  use strict;
  use warnings;
 
@@ -132,6 +136,8 @@ Error::Pure::HTTP::JSON::Advance - Error::Pure module for JSON output with addit
  # {"status":1,"error-pure":[{"msg":["1","2","3"],"stack":[{"sub":"err","prog":"example2.pl","args":"(1, 2, 3)","class":"main","line":17}]}],"message":"Foo bar"}
 
 =head1 EXAMPLE3
+
+=for comment filename=http_json_error_advance_pretty.pl
 
  use strict;
  use warnings;

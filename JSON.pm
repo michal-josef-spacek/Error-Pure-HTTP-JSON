@@ -79,6 +79,8 @@ Error::Pure::HTTP::JSON - Error::Pure module for JSON output over HTTP.
 
 =head1 EXAMPLE1
 
+=for comment filename=http_json_error.pl
+
  use strict;
  use warnings;
 
@@ -94,6 +96,8 @@ Error::Pure::HTTP::JSON - Error::Pure module for JSON output over HTTP.
 
 =head1 EXAMPLE2
 
+=for comment filename=http_json_error_with_options.pl
+
  use strict;
  use warnings;
 
@@ -108,6 +112,8 @@ Error::Pure::HTTP::JSON - Error::Pure module for JSON output over HTTP.
  # [{"msg":["1","2","3"],"stack":[{"sub":"err","prog":"example2.pl","args":"(1, 2, 3)","class":"main","line":11}]}]
 
 =head1 EXAMPLE3
+
+=for comment filename=http_json_pretty.pl
 
  use strict;
  use warnings;

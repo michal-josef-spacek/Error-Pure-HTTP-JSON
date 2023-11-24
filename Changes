@@ -2,6 +2,7 @@
  - Fix Makefile.PL fails with no '.' in @INC.
  - Improve LICENSE AND COPYRIGHT section in doc.
  - Move bugtracker to github.
+ - Rename example files to better names.
  - Rewrite from List::MoreUtils to List::Util.
  - Update Module::Install to 1.21 version.
  - Update author github username.
