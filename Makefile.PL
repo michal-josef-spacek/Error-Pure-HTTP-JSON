@@ -6,7 +6,7 @@ use inc::Module::Install;
 
 # Definition.
 abstract 'Perl module for HTTP JSON output for structured errors.';
-author 'Michal Spacek <skim@cpan.org>';
+author 'Michal Josef Spacek <skim@cpan.org>';
 author_requires 'English' => 0;
 author_requires 'File::Object' => 0.05;
 author_requires 'Test::Pod' => 0;
