@@ -72,8 +72,8 @@ EXAMPLE3
      # ]
 
 DEPENDENCIES
-    Error::Pure::Utils, Error::Pure::Output::JSON, Exporter,
-    List::MoreUtils, Readonly.
+    Error::Pure::Utils, Error::Pure::Output::JSON, Exporter, List::Util,
+    Readonly.
 
 SEE ALSO
     Task::Error::Pure

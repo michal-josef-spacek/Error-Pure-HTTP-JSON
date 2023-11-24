@@ -26,7 +26,7 @@ requires:
   Error::Pure::Output::JSON: 0.01
   Error::Pure::Utils: 0.11
   Exporter: 0
-  List::MoreUtils: 0
+  List::Util: 1.33
   Readonly: 0
   perl: 5.6.2
 resources:

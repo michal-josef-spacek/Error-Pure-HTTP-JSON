@@ -6,7 +6,7 @@ use warnings;
 
 use Error::Pure::Output::JSON qw(err_json);
 use Error::Pure::Utils qw(err_helper);
-use List::MoreUtils qw(none);
+use List::Util 1.33 qw(none);
 use Readonly;
 
 # Constants.
@@ -146,7 +146,7 @@ Error::Pure::HTTP::JSON - Error::Pure module for JSON output over HTTP.
 L<Error::Pure::Utils>,
 L<Error::Pure::Output::JSON>,
 L<Exporter>,
-L<List::MoreUtils>,
+L<List::Util>,
 L<Readonly>.
 
 =head1 SEE ALSO
